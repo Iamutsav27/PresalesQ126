@@ -60,11 +60,15 @@
           <svg class="h-5 w-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 3h6m-5 0v5l-5 9a2.5 2.5 0 002.2 3.7h9.6A2.5 2.5 0 0019 17l-5-9V3M7.5 15h9"/></svg>
           <span class="nav-label text-sm font-medium">Q1 POC Report</span>
         </button>
+        <button class="nav-item flex h-12 w-full items-center gap-4 rounded-xl px-3 text-slate-400 transition-colors hover:bg-white/5 hover:text-slate-200" data-target="comparison" title="Performance Comparison">
+          <svg class="h-5 w-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M7 7h13m0 0l-3-3m3 3l-3 3M17 17H4m0 0l3 3m-3-3l3-3"/></svg>
+          <span class="nav-label text-sm font-medium">Performance Comparison</span>
+        </button>
       </nav>
 
       <div class="mt-auto flex items-center gap-4 px-3 py-3 text-slate-500">
         <span class="grid h-5 w-5 shrink-0 place-items-center text-xs font-bold">01</span>
-        <span class="nav-label text-xs font-medium">3 slides in deck</span>
+        <span class="nav-label text-xs font-medium">4 slides in deck</span>
       </div>
     </div>
   </aside>
@@ -158,25 +162,25 @@
           </div>
 
           <div class="mt-4 grid grid-cols-3 gap-3">
-            <div class="glass metric-card rounded-2xl border border-white/10 p-4"><p class="text-[10px] font-bold uppercase tracking-wider text-slate-500">April</p><p id="aprilRate" class="mt-2 text-2xl font-extrabold text-blue-400">23.2%</p><p id="aprilDetail" class="mt-1 text-[10px] text-slate-500">13 of 56 won</p></div>
+            <div class="glass metric-card rounded-2xl border border-white/10 p-4"><p class="text-[10px] font-bold uppercase tracking-wider text-slate-500">April</p><p id="aprilRate" class="mt-2 text-2xl font-extrabold text-blue-400">40.4%</p><p id="aprilDetail" class="mt-1 text-[10px] text-slate-500">23 of 57 won</p></div>
             <div class="glass metric-card rounded-2xl border border-white/10 p-4"><p class="text-[10px] font-bold uppercase tracking-wider text-slate-500">May</p><p id="mayRate" class="mt-2 text-2xl font-extrabold text-indigo-400">46.9%</p><p id="mayDetail" class="mt-1 text-[10px] text-slate-500">30 of 64 won</p></div>
-            <div class="glass metric-card rounded-2xl border border-white/10 p-4"><p class="text-[10px] font-bold uppercase tracking-wider text-slate-500">June</p><p id="juneRate" class="mt-2 text-2xl font-extrabold text-emerald-400">54.1%</p><p id="juneDetail" class="mt-1 text-[10px] text-slate-500">33 of 61 won</p></div>
+            <div class="glass metric-card rounded-2xl border border-white/10 p-4"><p class="text-[10px] font-bold uppercase tracking-wider text-slate-500">June</p><p id="juneRate" class="mt-2 text-2xl font-extrabold text-emerald-400">53.3%</p><p id="juneDetail" class="mt-1 text-[10px] text-slate-500">32 of 60 won</p></div>
           </div>
 
           <div class="glass mt-4 overflow-hidden rounded-2xl border border-white/10">
             <table class="w-full text-left text-sm">
               <thead class="border-b border-white/10 bg-white/[.025] text-[10px] font-bold uppercase tracking-wider text-slate-500"><tr><th class="p-4">Month</th><th class="p-4 text-center">Cases</th><th class="p-4 text-center">Wins</th><th class="p-4 text-right">Conversion</th></tr></thead>
               <tbody id="reportRows" class="divide-y divide-white/[.07] text-slate-300"></tbody>
-              <tfoot class="border-t border-white/10 bg-blue-400/[.04] font-bold text-white"><tr><td class="p-4">Q1 Total</td><td id="tableTotalCases" class="p-4 text-center">181</td><td id="tableTotalWins" class="p-4 text-center">76</td><td id="tableTotalRate" class="p-4 text-right text-blue-300">42.0%</td></tr></tfoot>
+              <tfoot class="border-t border-white/10 bg-blue-400/[.04] font-bold text-white"><tr><td class="p-4">Q1 Total</td><td id="tableTotalCases" class="p-4 text-center">181</td><td id="tableTotalWins" class="p-4 text-center">85</td><td id="tableTotalRate" class="p-4 text-right text-blue-300">47.0%</td></tr></tfoot>
             </table>
           </div>
         </div>
 
         <div class="glass relative overflow-hidden rounded-[28px] border border-white/10 p-7 shadow-[0_30px_80px_rgba(0,0,0,.35)]">
           <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-blue-500 via-indigo-400 to-emerald-400"></div>
-          <div class="flex items-start justify-between"><div><h3 id="chartTitle" class="text-base font-bold text-white">All Members · Cases vs. Wins</h3><p class="mt-1 text-xs text-slate-500">Monthly performance comparison</p></div><div class="text-right"><p id="conversionLift" class="text-2xl font-extrabold text-white">+30.9<span class="text-sm text-emerald-400">pp</span></p><p class="text-[10px] text-slate-500">Apr–Jun conversion change</p></div></div>
+          <div class="flex items-start justify-between"><div><h3 id="chartTitle" class="text-base font-bold text-white">All Members · Cases vs. Wins</h3><p class="mt-1 text-xs text-slate-500">Monthly performance comparison</p></div><div class="text-right"><p id="conversionLift" class="text-2xl font-extrabold text-white">+12.9<span class="text-sm text-emerald-400">pp</span></p><p class="text-[10px] text-slate-500">Apr–Jun conversion change</p></div></div>
           <div class="mt-7 h-[360px]"><canvas id="funnelChart"></canvas></div>
-          <div class="mt-5 grid grid-cols-3 gap-3 border-t border-white/10 pt-5 text-center"><div><p id="totalCases" class="text-xl font-extrabold text-white">181</p><p class="text-[10px] uppercase tracking-wider text-slate-500">Total cases</p></div><div><p id="totalWins" class="text-xl font-extrabold text-white">76</p><p class="text-[10px] uppercase tracking-wider text-slate-500">Total wins</p></div><div><p id="totalRate" class="text-xl font-extrabold text-emerald-400">42.0%</p><p class="text-[10px] uppercase tracking-wider text-slate-500">Q1 conversion</p></div></div>
+          <div class="mt-5 grid grid-cols-3 gap-3 border-t border-white/10 pt-5 text-center"><div><p id="totalCases" class="text-xl font-extrabold text-white">181</p><p class="text-[10px] uppercase tracking-wider text-slate-500">Total cases</p></div><div><p id="totalWins" class="text-xl font-extrabold text-white">85</p><p class="text-[10px] uppercase tracking-wider text-slate-500">Total wins</p></div><div><p id="totalRate" class="text-xl font-extrabold text-emerald-400">47.0%</p><p class="text-[10px] uppercase tracking-wider text-slate-500">Q1 conversion</p></div></div>
         </div>
       </div>
       <footer class="flex items-center justify-between border-t border-white/10 pt-5 text-[11px] font-medium text-slate-600"><p>CONFIDENTIAL · INTERNAL BUSINESS REVIEW · SOURCE: PIPEDRIVE</p><p>02</p></footer>
@@ -197,18 +201,9 @@
           <div class="mt-7 grid grid-cols-3 gap-3">
             <div class="glass metric-card rounded-2xl border border-white/10 p-4"><p class="text-[10px] font-bold uppercase tracking-wider text-slate-500">April</p><p class="mt-2 text-2xl font-extrabold text-blue-400">75.0%</p><p class="mt-1 text-[10px] text-slate-500">8 POCs · 6 wins</p></div>
             <div class="glass metric-card rounded-2xl border border-white/10 p-4"><p class="text-[10px] font-bold uppercase tracking-wider text-slate-500">May</p><p class="mt-2 text-2xl font-extrabold text-indigo-400">100%</p><p class="mt-1 text-[10px] text-slate-500">7 POCs · 7 wins</p></div>
-            <div class="glass metric-card relative rounded-2xl border border-white/10 p-4">
+            <div class="glass metric-card rounded-2xl border border-white/10 p-4">
               <p class="text-[10px] font-bold uppercase tracking-wider text-slate-500">June</p>
-              <div class="mt-2 flex items-center gap-2">
-                <p class="text-2xl font-extrabold text-emerald-400">180%</p>
-                <button class="group relative grid h-5 w-5 place-items-center rounded-full border border-emerald-400/30 bg-emerald-400/10 text-[11px] font-bold text-emerald-300 outline-none transition hover:bg-emerald-400/20 focus:ring-2 focus:ring-emerald-400/40" type="button" aria-label="Why is the June activity ratio above 100 percent">
-                  i
-                  <span role="tooltip" class="pointer-events-none absolute bottom-full right-[-12px] z-50 mb-3 w-64 translate-y-1 rounded-xl border border-emerald-400/20 bg-[#0b1220] p-3 text-left text-[11px] font-normal leading-5 text-slate-300 opacity-0 shadow-2xl transition duration-200 group-hover:translate-y-0 group-hover:opacity-100 group-focus:translate-y-0 group-focus:opacity-100">
-                    <span class="font-semibold text-emerald-300">180%—apparently we went beyond the brief! Just kidding.</span> Wins are counted by the date they moved to “Won” in Pipedrive, so some originated from earlier POCs.
-                    <span class="absolute -bottom-1.5 right-4 h-3 w-3 rotate-45 border-b border-r border-emerald-400/20 bg-[#0b1220]"></span>
-                  </span>
-                </button>
-              </div>
+              <p class="mt-2 text-2xl font-extrabold text-emerald-400">180%</p>
               <p class="mt-1 text-[10px] text-slate-500">5 POCs · 9 wins</p>
             </div>
           </div>
@@ -220,8 +215,6 @@
               <tfoot class="border-t border-white/10 bg-violet-400/[.05] font-bold text-white"><tr><td class="p-4">Q1 Total</td><td class="p-4 text-center">20</td><td class="p-4 text-center">22</td><td class="p-4 text-right text-violet-300">110.0%</td></tr></tfoot>
             </table>
           </div>
-
-          <div class="mt-4 rounded-xl border border-amber-400/15 bg-amber-400/[.06] px-4 py-3 text-xs leading-5 text-amber-100/70"><span class="font-bold text-amber-300">Reporting note:</span> Wins are grouped by the date they moved to “Won” in Pipedrive and are not limited to POCs initiated in the same month. The activity ratio is therefore not a cohort conversion rate.</div>
         </div>
 
         <div class="glass relative overflow-hidden rounded-[28px] border border-white/10 p-7 shadow-[0_30px_80px_rgba(0,0,0,.35)]">
@@ -232,6 +225,36 @@
         </div>
       </div>
       <footer class="flex items-center justify-between border-t border-white/10 pt-5 text-[11px] font-medium text-slate-600"><p>CONFIDENTIAL · INTERNAL BUSINESS REVIEW · SOURCE: PIPEDRIVE</p><p>03</p></footer>
+    </section>
+
+    <section id="comparison" class="slide-panel relative mx-auto min-h-screen max-w-[1500px] flex-col px-7 py-6 lg:px-12 lg:py-8">
+      <header class="flex items-center justify-between border-b border-white/10 pb-5">
+        <div><p class="text-xs font-bold uppercase tracking-[.24em] text-cyan-400">Conversion Trend Analysis</p><p class="mt-2 text-lg font-semibold text-white">Elision Technologies Pvt. Ltd.</p></div>
+        <div class="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-4 py-2 text-xs font-semibold text-emerald-400">Q1 CONVERSION · 47.0%</div>
+      </header>
+
+      <div class="flex flex-1 flex-col justify-center py-6">
+        <div><div class="mb-3 flex items-center gap-3 text-xs font-bold uppercase tracking-[.22em] text-slate-500"><span class="h-px w-8 bg-cyan-400"></span>04 / Comparison</div><h2 class="text-4xl font-extrabold tracking-[-.04em] text-white xl:text-5xl">Conversion <span class="text-cyan-400">Improvement</span></h2><p class="mt-2 text-sm text-slate-400">Two focused views of Q1 FY25–26 performance: quarter-over-quarter and year-over-year.</p></div>
+
+        <div class="mt-6 grid gap-5 lg:grid-cols-2">
+          <article class="glass relative overflow-hidden rounded-[26px] border border-white/10 p-6 shadow-[0_24px_60px_rgba(0,0,0,.28)]">
+            <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-blue-500 to-cyan-400"></div>
+            <div class="flex items-start justify-between gap-4"><div><p class="text-[10px] font-bold uppercase tracking-[.18em] text-blue-400">Quarter-over-Quarter</p><h3 class="mt-2 text-lg font-bold text-white">Q4 FY25–26 vs Q1 FY25–26</h3><p class="mt-1 text-xs text-slate-500">Monthly conversion trend across consecutive quarters</p></div><div class="shrink-0 text-right"><p class="text-3xl font-extrabold text-emerald-400">+11.3%</p><p class="mt-1 text-[10px] font-semibold uppercase tracking-wider text-slate-500">Relative improvement</p></div></div>
+            <div class="mt-4 h-[270px]"><canvas id="qoqChart"></canvas></div>
+            <div class="mt-4 flex items-center justify-between rounded-xl border border-white/[.07] bg-white/[.025] px-4 py-3"><div><p class="text-[10px] uppercase tracking-wider text-slate-500">Quarter conversion</p><p class="mt-1 text-sm font-bold text-white">42.2% <span class="mx-2 text-slate-600">→</span> 47.0%</p></div><div class="text-right"><p class="text-xl font-extrabold text-emerald-400">+4.8 pp</p><p class="text-[10px] text-slate-500">absolute lift</p></div></div>
+          </article>
+
+          <article class="glass relative overflow-hidden rounded-[26px] border border-white/10 p-6 shadow-[0_24px_60px_rgba(0,0,0,.28)]">
+            <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-violet-500 to-emerald-400"></div>
+            <div class="flex items-start justify-between gap-4"><div><p class="text-[10px] font-bold uppercase tracking-[.18em] text-violet-400">Year-over-Year</p><h3 class="mt-2 text-lg font-bold text-white">Q1 FY24–25 vs Q1 FY25–26</h3><p class="mt-1 text-xs text-slate-500">Like-for-like monthly conversion comparison</p></div><div class="shrink-0 text-right"><p class="text-3xl font-extrabold text-emerald-400">+100.6%</p><p class="mt-1 text-[10px] font-semibold uppercase tracking-wider text-slate-500">Relative improvement</p></div></div>
+            <div class="mt-4 h-[270px]"><canvas id="yoyChart"></canvas></div>
+            <div class="mt-4 flex items-center justify-between rounded-xl border border-white/[.07] bg-white/[.025] px-4 py-3"><div><p class="text-[10px] uppercase tracking-wider text-slate-500">Quarter conversion</p><p class="mt-1 text-sm font-bold text-white">23.4% <span class="mx-2 text-slate-600">→</span> 47.0%</p></div><div class="text-right"><p class="text-xl font-extrabold text-emerald-400">+23.5 pp</p><p class="text-[10px] text-slate-500">absolute lift</p></div></div>
+          </article>
+        </div>
+
+        <div class="mt-5 flex items-center justify-between rounded-2xl border border-emerald-400/15 bg-emerald-400/[.045] px-5 py-4"><div><p class="text-sm font-bold text-white">Clear upward efficiency trend</p><p class="mt-1 text-xs text-slate-400">Q1 conversion improved against both the immediately preceding quarter and the same quarter last year.</p></div><div class="hidden gap-8 text-right sm:flex"><div><p class="text-lg font-extrabold text-white">85</p><p class="text-[9px] uppercase tracking-wider text-slate-500">Q1 wins</p></div><div><p class="text-lg font-extrabold text-white">181</p><p class="text-[9px] uppercase tracking-wider text-slate-500">Q1 cases</p></div></div></div>
+      </div>
+      <footer class="flex items-center justify-between border-t border-white/10 pt-5 text-[11px] font-medium text-slate-600"><p>CONFIDENTIAL · INTERNAL BUSINESS REVIEW · SOURCE: PIPEDRIVE</p><p>04</p></footer>
     </section>
   </main>
   <script>
@@ -250,6 +273,10 @@
         renderPocChart();
         requestAnimationFrame(() => pocChart && pocChart.resize());
       }
+      if (currentSlide === 3) {
+        renderComparisonCharts();
+        requestAnimationFrame(() => { qoqChart && qoqChart.resize(); yoyChart && yoyChart.resize(); });
+      }
     }
     navItems.forEach((item, i) => item.addEventListener('click', () => showSlide(i)));
     document.addEventListener('keydown', event => {
@@ -258,17 +285,13 @@
       if (['ArrowLeft', 'PageUp'].includes(event.key)) { event.preventDefault(); showSlide(currentSlide - 1); }
     });
     const teamData = {
-      akshita: { name: 'Akshita', cases: [12,23,14], wins: [1,5,1] },
+      akshita: { name: 'Akshita', cases: [13,23,14], wins: [8,5,1] },
       aman: { name: 'Aman', cases: [0,1,6], wins: [0,0,1] },
       manoj: { name: 'Manoj', cases: [0,8,2], wins: [0,0,1] },
-      utsav: { name: 'Utsav', cases: [15,15,12], wins: [5,12,9] },
-      vishesh: { name: 'Vishesh', cases: [29,17,27], wins: [7,13,21] }
+      utsav: { name: 'Utsav', cases: [15,15,12], wins: [6,12,9] },
+      vishesh: { name: 'Vishesh', cases: [29,17,27], wins: [9,13,21] }
     };
-    const allMembers = Object.values(teamData).reduce((total, person) => ({
-      name: 'All Members',
-      cases: total.cases.map((value, i) => value + person.cases[i]),
-      wins: total.wins.map((value, i) => value + person.wins[i])
-    }), { cases: [0,0,0], wins: [0,0,0] });
+    const allMembers = { name: 'All Members', cases: [57,64,60], wins: [23,30,32] };
     const months = ['April', 'May', 'June'];
     const rate = (wins, cases) => cases ? (wins / cases * 100).toFixed(1) : '0.0';
     let chart;
@@ -319,6 +342,18 @@
         ]},
         options: { responsive: true, maintainAspectRatio: false, animation: { duration: 800 }, plugins: { legend: { position: 'top', align: 'end', labels: { color: '#94a3b8', boxWidth: 10, boxHeight: 10, usePointStyle: true, padding: 18, font: { family: 'Inter', size: 11 } } }, tooltip: { backgroundColor: '#0f172a', padding: 12 } }, scales: { x: { grid: { display: false }, ticks: { color: '#cbd5e1', font: { family: 'Inter', weight: '600' } }, border: { display: false } }, y: { beginAtZero: true, suggestedMax: 10, grid: { color: 'rgba(148,163,184,.1)' }, ticks: { color: '#64748b', stepSize: 1 }, border: { display: false } } } }
       });
+    }
+    let qoqChart, yoyChart;
+    const trendOptions = {
+      responsive: true, maintainAspectRatio: false, animation: { duration: 850 }, interaction: { mode: 'index', intersect: false },
+      plugins: { legend: { position: 'top', align: 'end', labels: { color: '#94a3b8', boxWidth: 9, boxHeight: 9, usePointStyle: true, padding: 16, font: { family: 'Inter', size: 10 } } }, tooltip: { backgroundColor: '#0f172a', padding: 12, callbacks: { label: context => `${context.dataset.label}: ${context.parsed.y.toFixed(1)}%` } } },
+      scales: { x: { grid: { display: false }, ticks: { color: '#94a3b8', font: { family: 'Inter', size: 10, weight: '600' } }, border: { display: false } }, y: { min: 0, max: 60, grid: { color: 'rgba(148,163,184,.1)' }, ticks: { color: '#64748b', stepSize: 10, callback: value => `${value}%` }, border: { display: false } } }
+    };
+    const trendDataset = (label, data, color) => ({ label, data, borderColor: color, backgroundColor: color, borderWidth: 3, pointRadius: 4, pointHoverRadius: 6, pointBorderWidth: 2, pointBorderColor: '#0b1220', tension: .35, fill: false });
+    function renderComparisonCharts() {
+      if (qoqChart && yoyChart) return;
+      qoqChart = new Chart(document.getElementById('qoqChart'), { type: 'line', data: { labels: ['Month 1', 'Month 2', 'Month 3'], datasets: [trendDataset('Q4 · Jan–Mar', [38.9,46.7,40.8], '#60a5fa'), trendDataset('Q1 · Apr–Jun', [40.4,46.9,53.3], '#34d399')] }, options: trendOptions });
+      yoyChart = new Chart(document.getElementById('yoyChart'), { type: 'line', data: { labels: ['April', 'May', 'June'], datasets: [trendDataset("Q1 FY24–25", [28.3,18.4,24.6], '#a78bfa'), trendDataset('Q1 FY25–26', [40.4,46.9,53.3], '#34d399')] }, options: trendOptions });
     }
   </script>
 </body>
