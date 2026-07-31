@@ -58,20 +58,24 @@ const allMembers = { name: 'All Members', cases: [57,64,60], wins: [23,30,32] };
 const months = ['April', 'May', 'June'];
 const rate = (wins, cases) => cases ? (wins / cases * 100).toFixed(1) : '0.0';
 const winBreakdownData = {
+  products: {
+    name: 'Product', title: 'Product Distribution', subtitle: 'Percentage of 89 product associations', total: 89, totalLabel: 'Product associations', shareLabel: 'of product associations', countUnit: 'associations', minCount: 1,
+    items: [['VoiceLink',40],['Dialshree',37],['Greeter',5],['VoiceBot',5],['IPPBX',1],['Whatsapp Verified',1]]
+  },
   sources: {
-    name: 'Lead Source', title: 'Top Lead Sources', subtitle: 'Percentage of 85 won cases', total: 85, totalLabel: 'Won cases', shareLabel: 'of all won cases',
+    name: 'Lead Source', title: 'Top Lead Sources', subtitle: 'Percentage of 85 won cases', total: 85, totalLabel: 'Won cases', shareLabel: 'of all won cases', countUnit: 'cases', minCount: 5,
     items: [['Partner',25],['Jasmine',8],['Management',7],['Website',6],['Others',6],['LinkedIn Ads',5],['Referral',5],['Sakshi',5],['Google Ads',4],['Self',4],['Sonal',4],['Inbound sales call',3],['Bengaluru TEM 2',1],['Aimfox',1],['AI Summit',1]]
   },
   industries: {
-    name: 'Industries', title: 'Top Industries', subtitle: 'Percentage of 92 industry records', total: 92, totalLabel: 'Industry records', shareLabel: 'of industry records',
+    name: 'Industries', title: 'Top Industries', subtitle: 'Percentage of 92 industry records', total: 92, totalLabel: 'Industry records', shareLabel: 'of industry records', countUnit: 'records', minCount: 3,
     items: [['IT Services / Software',47],['NBFC',13],['Education',7],['BPO / KPO',4],['Business Services',4],['Consultancy',4],['BFSI',3],['Others',3],['Automotive',1],['Healthcare',1],['Agriculture',1],['Retail / eCommerce / Wholesale',1],['Media & Entertainment',1],['Fashion & Beauty Wellness',1],['Manufacturer',1]]
   }
 };
-let activeWinView = 'sources';
+let activeWinView = 'products';
 function renderWinBreakdown(view) {
   activeWinView = view;
   const data = winBreakdownData[view];
-  const visibleItems = data.items.filter(([, count]) => view === 'sources' ? count >= 5 : count >= 3);
+  const visibleItems = data.items.filter(([, count]) => count >= data.minCount);
   const topThree = data.items.slice(0, 3);
   const topThreeCount = topThree.reduce((sum, [, count]) => sum + count, 0);
   const percentage = count => (count / data.total * 100).toFixed(1);
@@ -82,7 +86,7 @@ function renderWinBreakdown(view) {
   document.getElementById('winRecordLabel').textContent = data.totalLabel;
   document.getElementById('winCategoryTotal').textContent = data.items.length;
   document.getElementById('winTopName').textContent = data.items[0][0];
-  document.getElementById('winTopCount').textContent = `${data.items[0][1]} ${view === 'sources' ? 'cases' : 'records'}`;
+  document.getElementById('winTopCount').textContent = `${data.items[0][1]} ${data.countUnit}`;
   document.getElementById('winTopShare').textContent = `${percentage(data.items[0][1])}%`;
   document.getElementById('winTopShareLabel').textContent = data.shareLabel;
   document.getElementById('winTopThreeShare').textContent = `${percentage(topThreeCount)}%`;
@@ -102,11 +106,11 @@ function renderWinBreakdown(view) {
 }
 document.querySelectorAll('.win-view-filter').forEach(button => button.addEventListener('click', () => renderWinBreakdown(button.dataset.view)));
 renderWinBreakdown(activeWinView);
-const documentationTypes = ['Announcement','API','Comparison Doc','Configuration Doc','FAQ','Release Note','SOP','Tooling / Internal','Use-Case Doc','User Manual'];
+const documentationTypes = ['Announcement','API','Comparison Doc','Configuration Doc','FAQ','Release Note','SOP','Tooling / Internal','Use-Case Doc','User Manual','Visual Guide'];
 const documentationData = {
-  april: { name: 'April', values: [1,0,0,0,0,1,0,4,0,20] },
-  may: { name: 'May', values: [0,2,0,0,1,2,2,2,1,13] },
-  june: { name: 'June', values: [0,3,1,3,1,3,1,0,0,32] }
+  april: { name: 'April', values: [1,0,0,0,0,1,0,4,0,20,0] },
+  may: { name: 'May', values: [0,37,0,0,1,2,2,2,1,13,0] },
+  june: { name: 'June', values: [0,3,1,3,1,3,1,0,0,32,21] }
 };
 documentationData.q1 = { name: 'Q1 Total', values: documentationTypes.map((_, i) => documentationData.april.values[i] + documentationData.may.values[i] + documentationData.june.values[i]) };
 let activeDocPeriod = 'q1';
@@ -116,7 +120,7 @@ function renderDocumentation(period) {
   const items = documentationTypes.map((name, i) => [name, data.values[i]]);
   const total = items.reduce((sum, [, count]) => sum + count, 0);
   const activeTypes = items.filter(([, count]) => count > 0).length;
-  const accents = ['#38bdf8','#818cf8','#34d399','#fbbf24','#f472b6','#fb7185','#94a3b8','#22d3ee','#c084fc','#60a5fa'];
+  const accents = ['#38bdf8','#818cf8','#34d399','#fbbf24','#f472b6','#fb7185','#94a3b8','#22d3ee','#c084fc','#60a5fa','#f97316'];
   document.getElementById('documentationTotalBadge').textContent = `${total} Documents`;
   document.getElementById('documentationPeriodName').textContent = data.name;
   document.getElementById('documentationSelectedTotal').textContent = total;
