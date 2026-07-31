@@ -150,8 +150,6 @@ function updateReport(key) {
   ['totalCases','tableTotalCases'].forEach(id => document.getElementById(id).textContent = totalCases);
   ['totalWins','tableTotalWins'].forEach(id => document.getElementById(id).textContent = totalWins);
   ['totalRate','tableTotalRate'].forEach(id => document.getElementById(id).textContent = `${rate(totalWins, totalCases)}%`);
-  const lift = Number(rate(data.wins[2], data.cases[2])) - Number(rate(data.wins[0], data.cases[0]));
-  document.getElementById('conversionLift').innerHTML = `${lift >= 0 ? '+' : ''}${lift.toFixed(1)}<span class="text-sm ${lift >= 0 ? 'text-emerald-400' : 'text-rose-400'}">pp</span>`;
   document.getElementById('chartTitle').textContent = `${data.name} · Cases vs. Wins`;
   renderChart();
   chart.data.datasets[0].data = data.cases;
